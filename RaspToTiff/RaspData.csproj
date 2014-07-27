@@ -428,9 +428,9 @@
   <PropertyGroup>
     <PostBuildEvent>
     if not exist "$(TargetDir)gdal" md "$(TargetDir)gdal"
-    xcopy /s /y "$(SolutionDir)packages\GDAL.Native.1.9.2\gdal\*.*" "$(TargetDir)gdal"
+    xcopy /s /y /d "$(SolutionDir)packages\GDAL.Native.1.9.2\gdal\*.*" "$(TargetDir)gdal"
     if not exist "$(TargetDir)gdal" md "$(TargetDir)gdal"
-    xcopy /s /y "$(SolutionDir)packages\GDAL.Plugins.1.9.2\gdal\*.*" "$(TargetDir)gdal"</PostBuildEvent>
+    xcopy /s /y /d "$(SolutionDir)packages\GDAL.Plugins.1.9.2\gdal\*.*" "$(TargetDir)gdal"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
